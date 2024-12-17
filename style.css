@@ -1,0 +1,249 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full Page Background */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0; /* Light gray background color */
+    background-image: url('background.jpg'); /* Optional: Add a background image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    font-family: Arial, sans-serif; /* Sets the font */
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 1%; /* Makes it a circle */
+    box-shadow: 0 0 20px 10px rgba(255, 173, 78, 0.3); /* X, Y, Blur, Spread, Color */
+}
+
+/* Left Sidebar */
+.sidebar {
+    background-color: #252526; /* Dark background */
+    color: #fff;
+    padding: 20px; /* Keep padding on the sidebar */
+    box-sizing: border-box;
+    position: relative; /* Allows better control over child elements */
+    background-image: url(david2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.spacer{
+    height: 40%;
+}
+
+.profile-image {
+    display: block; /* Removes default inline spacing */
+    width: calc(100% + 40px); /* Compensates for the sidebar padding (20px on both sides) */
+    margin: -20px; /* Negative margin cancels out the sidebar padding */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures image fills the space proportionally */
+    border: none; /* Removes any default borders */
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #ffb347;
+    padding-bottom: 5px;
+}
+
+.contact-info, .education, .skills {
+    margin-bottom: 20px;
+}
+
+.sidebar p, .sidebar ul {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 5px 0;
+}
+
+.highlight {
+    color: #ffb347;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px 40px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #252526;
+}
+
+.role {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #ffa833;
+    margin: 20px 0 10px;
+}
+
+.achievements {
+    background-color: #ffa833;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.achievements ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+.employment article {
+    margin-bottom: 20px;
+}
+
+.employment h3 {
+    color: #252526;
+    font-size: 1.2rem;
+}
+
+.employment p, .employment ul {
+    margin: 5px 0 0 20px;
+    font-size: 0.95rem;
+}
+
+/* Skills Section */
+.skills {
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.skills h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #252526;
+}
+
+/* Individual Skill */
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill span {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+    
+}
+
+/* Skill Bar */
+.skill-bar {
+    width: 100%;
+    height: 10px; /* Small bar height */
+    background-color: #ccc; /* Light gray background */
+    border-radius: 5px;
+    overflow: hidden; /* Keeps the fill within rounded corners */
+    position: relative;
+}
+
+.skill-fill {
+    height: 100%;
+    background-color: #ffa833; /* Orange fill color */
+    transition: width 1s ease-in-out; /* Smooth animation effect */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+}
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            display: block; /* Stack vertically */
+            width: 100%; /* Full width */
+            margin: 0;
+        }
+
+        .sidebar {
+
+            text-align: right; /* Center sidebar content */
+            padding: 15px;
+        }
+
+        .main-content {
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 1.5em; /* Reduce heading size */
+        }
+
+        .key-achievements {
+            padding: 10px;
+            font-size: 0.9em; /* Smaller font size */
+        }
+
+        .skills{
+            position: relative;
+            width: 50%;
+            left: 50%;
+        }
+        .sidebar h2 {
+            position: relative;
+            width: 50%;
+            left: 50%;
+            margin: 10px 0;
+            font-size: 1.4rem;
+            border-bottom: 1px solid #ffb347;
+            padding-bottom: 5px;
+        }
+        
+        .contact-info, .education, .skills {
+            margin-bottom: 20px;
+        }
+        
+        .sidebar p, .sidebar ul {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar ul li {
+            margin: 5px 0;
+        }
+
+    }
+
+
